@@ -2,7 +2,7 @@ import './App.css'
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
-import AllUser from './pages/AllUser';
+import AllUser from './Pages/AllUser';
 import NavBar from './LayOut/NavBar'
 import NewUser from './Pages/NewUser'
 import Home from './Pages/Home'
