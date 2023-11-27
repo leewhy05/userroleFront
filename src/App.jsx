@@ -7,7 +7,7 @@ import NavBar from './LayOut/NavBar'
 import NewUser from './Pages/NewUser'
 import Home from './Pages/Home'
 import SingleUser from './Pages/SingleUser'
-import Footer from './LayOut/footer'
+import Footer from './LayOut/Footer'
 
 
 
