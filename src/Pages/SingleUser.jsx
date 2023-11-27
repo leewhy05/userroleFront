@@ -30,7 +30,7 @@ const SingleUser = () => {
 
   const handleDelete = async (userId) => {
     try {
-      await axios.delete(`http://localhost:8080/api/user/${userId}`);
+      await axios.delete( `https://create-user.onrender.com/api/user/${userId}`);
       navigate("/AllUser");
     } catch (error) {}
   };
