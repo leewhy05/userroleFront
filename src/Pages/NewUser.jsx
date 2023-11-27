@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Await, Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
-
 import '../style/NewUser.css'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
