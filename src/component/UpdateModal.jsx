@@ -11,7 +11,7 @@ const UpdateModal = () => {
     const [email, setEmail] = useState('');
     const [profession, setProfesion] = useState ('');
     const [gender,setGender] =useState('');
-    const {userId} = useParams();
+    const {userId} = useParams();   
     const navigate = useNavigate();
     let getData = async () => {
         try { 

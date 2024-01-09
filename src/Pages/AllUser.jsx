@@ -31,30 +31,26 @@ const AllUser = () => {
     <main className='container py-4'>
       <h1>All User</h1>
         {loading && <Spinner animation='border'/>}
-      <div className='container pt-5 row justify-content-between align-items-center gap-3'>
-        {data && data.lenght < 1 ? (
-          <h2 className='text-danger'>No Users yet...create one</h2>
-        ):(
-          data.map((datum)=>{
-            const {_id, name, email, gender, profession}= datum;
-            return(
-                <div className='card col-lg-5 p-3 shadow-sm' key={_id}>
-                  <Link className='text-decoration-none' to={`/SingleUser/${_id}`}>
-                    <h2>{name}</h2> 
-                    <p>{email}</p>
-                    <p>{profession}</p>
-                    <p>{gender}</p>
-                    <span className='text-danger'>click to see more</span>
-                  </Link>
-
-          
-              </div>
-              
-            )
-          })
-        )}
-
-      </div>
+        <div className='container pt-5 row justify-content-between align-items-center gap-3'>
+      {data && data.length > 0 ? (
+        data.map((datum) => {
+          const {_id, name, email, gender, profession} = datum;
+          return (
+            <div className='card col-lg-5 p-3 shadow-sm' key={_id}>
+              <Link className='text-decoration-none' to={`/SingleUser/${_id}`}>
+                <h2>{name}</h2> 
+                <p>{email}</p>
+                <p>{profession}</p>
+                <p>{gender}</p>
+                <span className='text-danger'>Click to see more</span>
+              </Link>
+            </div>
+          );
+        })
+      ) : (
+        <h2 className='text-danger'>No users yet... Create one and be the first!</h2>
+      )}
+    </div>
       <div>
               <Link className='text-decoration-none' onClick={scrollToTop}>
         <p className="text-center fs-4 move">
